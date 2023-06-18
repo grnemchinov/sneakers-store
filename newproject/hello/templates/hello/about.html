@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style/style.css'%}" type="text/css">
+</head>
+<body>
+{% include 'includes/navbar.html'%}
+{% load static %}
+<div class="container-about">
+    <div class="card-about">
+        <div class="column-1">
+            <div class="imgBx-about"><h2 class="h2-about">About us</h2>
+                <p class="p-about">This project was created for more convenient ordering of new sneakers,
+                where shoes from China are safely and honestly supplied. We are responsible for every sneaker you order,
+                because the mood of our customers is one of the most important things.</p>
+            </div>
+            <img src="{%static 'img/about3.jpg'%}" class="imgBx-about">
+            <img src="{%static 'img/about4.jpg'%}" class="imgBx-about">
+        </div>
+        <div class="column-2">
+            <img src="{%static 'img/about1.avif'%}" class="imgBx-about box-1">
+            <img src="{%static 'img/about2.jpg'%}" class="imgBx-about box-1">
+        </div>
+        <div class="column-1">
+            <div class="imgBx-about"><h2 class="h2-about">Project</h2>
+                <p class="p-about">I did this project exclusively for myself, many people did not like it,
+                    there are those who liked my project. My dad helped me with it, thank him very much.
+                    And the most important thing is that I personally really like this site.</p>
+            </div>
+            <img src="{%static 'img/about5.jpg'%}" class="imgBx-about">
+            <img src="{%static 'img/about6.jpg'%}" class="imgBx-about">
+        </div>
+    </div>
+</div>
+{% include 'includes/footer.html'%}
+</body>
+</html>

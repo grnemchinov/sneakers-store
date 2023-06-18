@@ -1,0 +1,29 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+<div class="glassBox">
+    <div class="glassBox__imgBox">
+        <a href="detail/{{ item.id }}"><img src="{{ STATIC_PREFIX }}img/{{ item.image }}" alt=""></a>
+    </div>
+    <div class="card-part">
+        <div class="contentBx">
+            <h3 >{{ item.title }}</h3>
+            <div class="size">
+                <h3>Size :</h3>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+            </div>
+            <h3>Available colors: </h3>
+            <div>
+                {% for color in item.colours %}
+                <span class="colorbox" style="background:  {{ color }}"></span>
+                {% endfor %}
+            </div>
+            <a href="detail/{{ item.id }}" class="btn">
+                <span class="btn-inner">See More</span>
+            </a>
+        </div>
+    </div>
+</div>

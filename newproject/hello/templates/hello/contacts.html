@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Услуги</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style/style.css'%}" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include 'includes/navbar.html'%}
+{% load static %}
+<div class="card">
+    <div class="container">
+        <div class="imgBx-contact">
+            <div class="container-contact">
+                <form>
+                    <p>Get in touch</p>
+                    <input type="email" placeholder="Email"><br>
+                    <input type="text" placeholder="Name"><br>
+                    <input type="text" placeholder="Question"><br>
+                    <input type="button" value="Send email"><br>
+                    <a href="#">Want more than question?</a>
+                </form>
+
+                <div class="drops">
+                    <div class="drop drop-1"></div>
+                    <div class="drop drop-2"></div>
+                    <div class="drop drop-3"></div>
+                    <div class="drop drop-4"></div>
+                    <div class="drop drop-5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="details">
+            <div>
+                <h2>Let's get in touch</h2>
+                <p><span class="color_text">We're open to any questions</span></p>
+                <p id="map-card"><img src="{%static 'img/pin-svgrepo-com.svg'%}" alt="" class="logo">
+                <span class="color_text">Каштановая улица, 2, Одинцово, Московская область</span></p>
+                <p><img src="{%static 'img/phone-scratched-svgrepo-com.svg'%}" alt="" class="logo">
+                <span class="color_text"> +79605394208</span></p>
+                <p><img src="{%static 'img/mail-svgrepo-com.svg'%}" alt="" class="logo">
+                <span class="color_text"> g.m.nemchinov2005@mail.ru</span></p>
+                <p><img src="{%static 'img/tv-svgrepo-com.svg'%}" alt="" class="logo">
+                <span class="color_text"> https://vk.com/lucky1cs</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'includes/footer.html'%}
+</body>
+</html>

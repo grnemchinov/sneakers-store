@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ item.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style/style.css'%}" type="text/css">
+</head>
+{% get_static_prefix as STATIC_PREFIX %}
+<body>
+{% load static %}
+{% include 'includes/navbar.html'%}
+<div class="card">
+    <div class="container">
+        <div class="imgBx">
+            <span class="brand_title">{{ item.title }}</span>
+            <img src="{{ STATIC_PREFIX }}img/{{ item.image }}">
+            <span class="brand">{{ item.brand }}</span>
+        </div>
+        <div class="details">
+            <div>
+                <p><span class="color_text">Brand: </span>{{ item.brand }}</p>
+                <p><span class="color_text">Gender: </span>{{ item.get_gender_display }}</p>
+                <p><span class="color_text">Country: </span>{{ item.country }}</p>
+                <p><span class="color_text">Note: </span>{{ item.note }}</p>
+                <p><div class="color_text">Available colors:
+                    {% for color in item.colours %}
+                    <span class="colorbox" style="background:  {{ color }}"></span>
+                    {% endfor %}
+                </div>
+            </div></p>
+
+            <p><span class="color_text">Vendor: </span>{{ item.vendor }}</p>
+
+            <button>
+                <a href="#" class="btn">
+                    <span class="btn-inner">BUY NOW</span>
+                </a>
+            </button>
+        </div>
+    </div>
+</div>
+{% include 'includes/footer.html'%}
+</body>
+</html>

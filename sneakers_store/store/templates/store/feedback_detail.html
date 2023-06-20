@@ -1,0 +1,19 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style/style.css' %}"
+          type="text/css">
+</head>
+<body>
+{% include 'includes/navbar.html' %}
+<div class="content">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="submit">
+        </form>
+</div>
+
+{% include 'includes/footer.html' %}
+</body>

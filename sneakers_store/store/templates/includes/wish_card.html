@@ -1,0 +1,13 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+<div class="glassBox">
+    <div class="card-part">
+        <div class="contentBx">
+            <h3>{{ item.title }}</h3>
+        </div>
+        <a href="detail/wishlist/remove/{{ item.id }}" class="btn">
+            <span class="btn-inner">🗑️ Delete</span>
+        </a>
+    </div>
+</div>

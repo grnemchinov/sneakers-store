@@ -1,0 +1,17 @@
+<div class="content">
+    {% for item in items %}
+        {% include 'includes/feedback.html' with item=item %}
+    {% endfor %}
+    <div class="glassBox">
+        <div class="card-part">
+            <div class="contentBx">
+                <a href="feedback/create" class="btn">
+                    <span class="btn-inner">➕ New</span>
+                </a>
+                <a href="feedbacks" class="btn">
+                    <span class="btn-inner">next → ...</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

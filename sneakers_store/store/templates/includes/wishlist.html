@@ -1,0 +1,17 @@
+<div class="content">
+    {% for item in items %}
+        {% include 'includes/wish_card.html' with item=item %}
+    {% endfor %}
+    <div class="glassBox">
+        <div class="card-part">
+            <div class="contentBx">
+                <a href="wishlist/send" class="btn">
+                    <span class="btn-inner">💌 send all</span>
+                </a>
+                <a href="#" class="btn">
+                    <span class="btn-inner">next → ...</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

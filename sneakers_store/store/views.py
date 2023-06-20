@@ -103,7 +103,7 @@ def wishlist_send(request):
     htmly = get_template('email.html')
     text_content = plaintext.render(context=context)
     html_content = htmly.render(context=context)
-    email = EmailMultiAlternatives('New wishes!', text_content, to=['mnemchinov@mail.ru'])
+    email = EmailMultiAlternatives('New wishes!', text_content, to=['isip_g.m.nemchinov@mpt.ru'])
     email.attach_alternative(html_content, "text/html")
     email.send()
     wishlist.clear()

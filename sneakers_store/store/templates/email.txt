@@ -1,6 +1,6 @@
-User: {{ user.username }} /n
-Email: {{ user.email }} /n
+User: {{ user.username }}
+Email: {{ user.email }}
 Content: /n
 {% for item in items %}
-    {{ item.id }} {{ item.title }} /n
+    {{ item.id }} {{ item.title }}
 {% endfor %}

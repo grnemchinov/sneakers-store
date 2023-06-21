@@ -122,14 +122,9 @@
         </div>
     </section>
 </main>
-<div class="card-img"><span class="parallax-text" >NIKE</span>
-<!--    <img src="{%static 'img/force.png'%}" alt="Nike sneaker" class="big">--></div>
-
-{% include 'includes/cards.html'%}
-<div class="card-img"><span class="parallax-text" >ADIDAS</span>
-<!--    <img src="{%static 'img/ozweego.png'%}" alt="Adidas sneaker" class="big">--></div>
-
-{% include 'includes/cards.html'%}
+{% for item in items %}
+    {% include 'includes/brand_products.html' with items=item.items brand=item.brand %}
+{% endfor %}
 {% include 'includes/footer.html'%}
 </body>
 </html>

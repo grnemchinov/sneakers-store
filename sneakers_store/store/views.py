@@ -1,18 +1,22 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
-from django.template import Context
 from django.template.loader import get_template
 from django.urls import reverse_lazy
 from django.views import generic
-from django.core.mail import EmailMessage, EmailMultiAlternatives
+from django.core.mail import EmailMultiAlternatives
 
 from store.forms import FeedbackForm
-from store.models import Sneakers, Feedback, WishList
+from store.models import Sneakers, Feedback, WishList, Brand
 from django.contrib import messages
 
 
 def index(request):
-    items = Sneakers.objects.all()
+    items = []
+    all_brands = Brand.objects.all()
+    for i, brand in enumerate(all_brands):
+        products = Sneakers.objects.filter(brand=brand).all()
+        if products:
+            items.append({"items": products, "brand": brand})
     context = {"items": items}
     return render(request, 'store/index.html', context=context)
 
